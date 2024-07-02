@@ -1,0 +1,21 @@
+-- 삭제 순서
+-- delete from orders where customer_id = 1;
+-- delete from customer where id = 1;
+
+-- customer 테이블의 id=1번 고객 정보 원상복구
+-- INSERT INTO customer VALUES (1, '동해물', '서울', '010-1234-5678');
+-- -- orders 테이블 생성DDL (customer_id 외래키 제약조건 + CASCADE 옵션)
+-- DROP TABLE orders;
+-- CREATE TABLE orders (
+--         id INT PRIMARY KEY,
+--         customer_id INT, 
+--         date TIMESTAMP DEFAULT now(),
+--         payment VARCHAR(50),
+--         amount INT,
+--         delivery_amount INT,
+--         FOREIGN KEY (customer_id) REFERENCES customer(id) ON DELETE CASCADE
+-- );
+-- INSERT INTO orders VALUES 
+-- (1, 1, '2023-11-12', '신용카드', 10000, 2500),
+-- (2, 1, '2023-11-13', '신용카드', 20000, 2500),
+-- (3, 2, '2023-11-12', '계좌이체', 30000, 3000);
