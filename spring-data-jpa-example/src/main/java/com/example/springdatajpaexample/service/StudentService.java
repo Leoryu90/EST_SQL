@@ -15,6 +15,14 @@ public class StudentService {
     }
 
     public List<Students> selectAllStudents() {
-        return studentRepository.findByName("이름");
+        return studentRepository.findAll();
+    }
+
+    public List<Students> selectAllByName(String name) {
+        return studentRepository.findByName(name);
+    }
+
+    public Students insertStudent(Students students) {
+        return studentRepository.save(students);
     }
 }

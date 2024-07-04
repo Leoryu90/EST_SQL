@@ -20,4 +20,10 @@ public class Students {
 
     @Column
     private String address;
+
+    public Students(String name, int age, String address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
 }
